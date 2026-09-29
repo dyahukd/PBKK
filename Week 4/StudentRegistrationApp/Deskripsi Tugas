@@ -1,0 +1,40 @@
+# Week 04 - Aplikasi Desktop Registrasi Mahasiswa (Avalonia)
+
+**Nama: Dyah Utami Kesuma Dewi**
+**NRP: 5025241186**
+**Kelas: PBKK D**
+
+## Deskripsi
+
+Aplikasi desktop berbasis C# dan Avalonia UI untuk mengelola data mahasiswa (NRP, nama, prodi, IPK). Dibuat lintas platform, bisa jalan di Windows maupun Linux.
+
+Fitur utama:
+- Tambah, edit, dan hapus data mahasiswa (hapus dengan konfirmasi).
+- Tabel DataGrid yang bisa diurutkan per kolom.
+- Pencarian langsung berdasarkan NRP, nama, atau prodi.
+- Validasi input: NRP 10 digit & tidak dobel, nama & prodi wajib, IPK 0–4.
+- Ringkasan jumlah mahasiswa, rata-rata IPK, dan IPK tertinggi.
+
+## Struktur Project
+
+```
+Week-04/
+├── README.md
+├── img/
+└── StudentRegistrationApp/
+    ├── StudentRegistrationApp.csproj
+    ├── Program.cs
+    ├── App.axaml
+    ├── App.axaml.cs
+    ├── Mahasiswa.cs
+    ├── MainWindow.axaml
+    └── MainWindow.axaml.cs
+```
+
+## Cara Menjalankan
+
+```bash
+cd Week-04/StudentRegistrationApp
+dotnet restore
+dotnet run
+```
