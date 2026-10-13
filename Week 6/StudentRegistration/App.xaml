@@ -1,0 +1,63 @@
+<Application x:Class="StudentRegistration.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Color x:Key="Rose">#D94F87</Color>
+        <Color x:Key="RoseDark">#B9366B</Color>
+        <Color x:Key="RoseLight">#FCE7F0</Color>
+        <Color x:Key="Canvas">#FFF8FB</Color>
+        <SolidColorBrush x:Key="RoseBrush" Color="{StaticResource Rose}"/>
+        <SolidColorBrush x:Key="RoseDarkBrush" Color="{StaticResource RoseDark}"/>
+        <SolidColorBrush x:Key="RoseLightBrush" Color="{StaticResource RoseLight}"/>
+        <SolidColorBrush x:Key="CanvasBrush" Color="{StaticResource Canvas}"/>
+        <SolidColorBrush x:Key="InkBrush" Color="#382A32"/>
+        <SolidColorBrush x:Key="MutedBrush" Color="#8B7782"/>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="18,10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="12"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Opacity" Value="0.86"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="ButtonBorder" Property="Opacity" Value="0.45"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Header kolom: rata tengah -->
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#FFF0F6"/>
+            <Setter Property="Foreground" Value="#7D3657"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="12,13"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="BorderBrush" Value="#F4DCE7"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="Padding" Value="10,9"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#493943"/>
+        </Style>
+    </Application.Resources>
+</Application>
